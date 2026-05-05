@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Dashboard | EAPCET Prep</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">EAPCET Prep</a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="mocktest.html">Mock Test</a>
+        <a aria-current="page" href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="dashboard-page" class="page-shell">
+    <section class="page-heading page-heading-compact">
+      <p class="eyebrow">Smart Analytics</p>
+      <h1>Your learning dashboard</h1>
+      <p>Use performance trends, weak topics, and confidence insights to decide what to do next.</p>
+    </section>
+
+    <section class="summary-grid">
+      <article class="summary-card">
+        <span>Latest Score</span>
+        <strong id="dash-latest-score">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>Accuracy</span>
+        <strong id="dash-accuracy">0%</strong>
+      </article>
+      <article class="summary-card intelligence-stat">
+        <span>Intelligence</span>
+        <strong id="dash-intelligence">0</strong>
+        <small id="dash-intelligence-label">Beginner</small>
+      </article>
+      <article class="summary-card">
+        <span>Tests Taken</span>
+        <strong id="dash-tests">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>Average Score</span>
+        <strong id="dash-average">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>XP</span>
+        <strong id="dash-xp">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>Level</span>
+        <strong id="dash-level">Level 1</strong>
+      </article>
+      <article class="summary-card">
+        <span>Streak</span>
+        <strong id="dash-streak">0 day</strong>
+      </article>
+      <article class="summary-card">
+        <span>Overconfidence</span>
+        <strong id="dash-overconfidence">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>Good Intuition</span>
+        <strong id="dash-good-intuition">0</strong>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="analytics-card">
+        <h2>Score History</h2>
+        <div id="score-chart" class="bar-chart" aria-label="Score history chart"></div>
+      </article>
+      <article class="analytics-card">
+        <h2>Accuracy Trend</h2>
+        <div id="accuracy-chart" class="bar-chart" aria-label="Accuracy trend chart"></div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="analytics-card">
+        <h2>Weak Topics</h2>
+        <ul id="weak-topics" class="topic-list"></ul>
+      </article>
+      <article class="analytics-card">
+        <h2>Strong Topics</h2>
+        <ul id="strong-topics" class="topic-list"></ul>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="analytics-card">
+        <h2>Recommendations</h2>
+        <ul id="recommendations" class="recommendation-list"></ul>
+        <div class="card-actions">
+          <a class="secondary-button outline-button" href="practice.html">Practice Now</a>
+          <a class="secondary-button outline-button" href="mocktest.html">Take Test</a>
+        </div>
+      </article>
+      <article class="analytics-card">
+        <h2>Badges</h2>
+        <p class="badge-count"><span id="dash-badges">0</span> earned</p>
+        <ul id="badge-list" class="badge-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

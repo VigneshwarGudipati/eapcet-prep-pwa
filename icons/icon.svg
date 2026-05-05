@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="EAPCET Prep icon">
+  <rect width="512" height="512" rx="112" fill="#4f46e5"/>
+  <rect x="108" y="112" width="296" height="288" rx="32" fill="#ffffff"/>
+  <path d="M150 178h212M150 240h212M150 302h120" fill="none" stroke="#4f46e5" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="338" cy="324" r="42" fill="#16a34a"/>
+  <path d="M318 323l14 15 28-32" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

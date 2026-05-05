@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Mock Test | EAPCET Prep</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">EAPCET Prep</a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a aria-current="page" href="mocktest.html">Mock Test</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="test-topbar">
+      <div>
+        <p class="eyebrow">Mock Test</p>
+        <h1>Configure and start your exam simulation.</h1>
+      </div>
+      <div id="timer-box" class="timer-box" aria-live="polite" hidden>
+        <span>Time Left</span>
+        <strong id="timer">3:00:00</strong>
+        <button id="submit-test" class="danger-button timer-submit" type="button">
+          Submit Test
+        </button>
+      </div>
+    </section>
+
+    <section id="test-config" class="control-card">
+      <h2>Configure test</h2>
+      <div class="test-type-options">
+        <label class="radio-card">
+          <input type="radio" name="test-type" value="full" checked>
+          <span>Full Test</span>
+          <small>180 questions with EAPCET ratio</small>
+        </label>
+        <label class="radio-card">
+          <input type="radio" name="test-type" value="custom">
+          <span>Custom Test</span>
+          <small>Choose 10 to 180 questions</small>
+        </label>
+      </div>
+      <label class="custom-count-field">
+        Number of questions
+        <input id="custom-question-count" type="number" min="10" max="180" value="30" disabled>
+      </label>
+      <p id="test-config-error" class="form-error" aria-live="polite"></p>
+      <button id="start-test" class="primary-button" type="button">Start Test</button>
+    </section>
+
+    <section id="test-layout" class="test-layout" hidden>
+      <article class="quiz-card test-card" aria-live="polite">
+        <div class="quiz-meta">
+          <span id="test-question-count">Question 1 of 1</span>
+          <span id="test-question-topic">Subject - Topic</span>
+          <span id="test-question-difficulty">Difficulty</span>
+        </div>
+
+        <h2 id="test-question-text">Loading question...</h2>
+        <div id="test-options-list" class="options-list"></div>
+
+        <div id="test-confidence-panel" class="confidence-panel" hidden>
+          <span>Confidence</span>
+          <div class="confidence-actions">
+            <button id="test-sure-button" class="confidence-button" type="button">Sure</button>
+            <button id="test-not-sure-button" class="confidence-button" type="button">Not Sure</button>
+          </div>
+        </div>
+
+        <div class="test-actions">
+          <button id="previous-question" class="secondary-button outline-button" type="button">
+            Previous
+          </button>
+          <button id="mark-test-review" class="secondary-button outline-button" type="button">
+            Mark Review
+          </button>
+          <button id="next-question" class="secondary-button" type="button">
+            Next
+          </button>
+        </div>
+      </article>
+
+      <aside class="palette-card" aria-label="Question palette">
+        <h2>Questions</h2>
+        <div class="palette-legend">
+          <span><i class="legend-dot current"></i>Current</span>
+          <span><i class="legend-dot answered"></i>Answered</span>
+          <span><i class="legend-dot skipped"></i>Not Answered</span>
+          <span><i class="legend-dot review"></i>Review</span>
+        </div>
+        <div id="question-palette" class="question-palette"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="data/questions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Practice | EAPCET Prep</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">EAPCET Prep</a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="practice.html">Practice</a>
+        <a href="mocktest.html">Mock Test</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading page-heading-compact">
+      <p class="eyebrow">Practice Mode</p>
+      <h1>Practice with exam-like decisions.</h1>
+      <p>Select an answer, mark confidence, skip when needed, or check the explanation when you want clarity.</p>
+    </section>
+
+    <section class="control-card">
+      <div class="filter-grid">
+        <label>
+          Mode
+          <select id="practice-mode">
+            <option value="random">Random Practice</option>
+            <option value="chapter">Chapter-wise Practice</option>
+            <option value="weak">Weak Topic Practice</option>
+            <option value="important">Important Questions</option>
+          </select>
+        </label>
+        <label>
+          Subject
+          <select id="practice-subject">
+            <option value="">All Subjects</option>
+          </select>
+        </label>
+        <label>
+          Chapter
+          <select id="practice-chapter">
+            <option value="">All Chapters</option>
+          </select>
+        </label>
+        <label>
+          Difficulty
+          <select id="practice-difficulty">
+            <option value="">All Levels</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </label>
+        <label>
+          Frequency
+          <select id="practice-frequency">
+            <option value="">Any Frequency</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </label>
+        <button id="apply-practice-filters" class="primary-button" type="button">Apply</button>
+      </div>
+      <p id="practice-filter-note" class="form-note"></p>
+    </section>
+
+    <section id="practice-layout" class="practice-layout">
+      <article id="practice-card" class="quiz-card practice-card" aria-live="polite">
+        <div class="quiz-meta">
+          <span id="question-count">Question 1 of 1</span>
+          <span id="question-topic">Topic</span>
+          <span id="question-difficulty">Difficulty</span>
+          <span id="question-status">Not answered</span>
+        </div>
+
+        <h2 id="question-text">Loading question...</h2>
+
+        <div id="options-list" class="options-list"></div>
+
+        <div id="confidence-panel" class="confidence-panel" hidden>
+          <span>Are you sure?</span>
+          <div class="confidence-actions">
+            <button id="sure-button" class="confidence-button" type="button">Sure</button>
+            <button id="not-sure-button" class="confidence-button" type="button">Not Sure</button>
+          </div>
+        </div>
+
+        <div id="feedback" class="feedback" hidden>
+          <strong id="feedback-title"></strong>
+          <p id="feedback-explanation"></p>
+        </div>
+
+        <div class="quiz-actions practice-actions">
+          <button id="show-answer-button" class="secondary-button outline-button" type="button" disabled>
+            Show Answer
+          </button>
+          <button id="skip-button" class="secondary-button outline-button" type="button">
+            Skip
+          </button>
+          <button id="review-button" class="secondary-button outline-button" type="button">
+            Mark for Review
+          </button>
+          <button id="next-button" class="secondary-button" type="button" disabled>
+            Next Question
+          </button>
+        </div>
+      </article>
+
+      <aside class="palette-card practice-palette-card" aria-label="Practice question palette">
+        <h2>Practice Palette</h2>
+        <div class="palette-legend">
+          <span><i class="legend-dot answered"></i>Answered</span>
+          <span><i class="legend-dot skipped"></i>Skipped</span>
+          <span><i class="legend-dot review"></i>Review</span>
+        </div>
+        <div id="practice-palette" class="question-palette"></div>
+      </aside>
+    </section>
+
+    <section id="practice-completion" class="completion-card" hidden>
+      <p class="eyebrow">Practice Summary</p>
+      <h2>Practice Completed!</h2>
+      <p>You have completed all questions.</p>
+
+      <div class="completion-grid">
+        <div class="result-stat">
+          <span>Total Questions</span>
+          <strong id="completion-total">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Answered</span>
+          <strong id="completion-answered">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Skipped</span>
+          <strong id="completion-skipped">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Marked for Review</span>
+          <strong id="completion-review">0</strong>
+        </div>
+      </div>
+
+      <div class="completion-actions">
+        <button id="restart-practice" class="primary-button" type="button">Restart Practice</button>
+        <button id="go-home" class="secondary-button outline-button" type="button">Go Home</button>
+        <button id="go-dashboard" class="secondary-button outline-button" type="button">View Dashboard</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/questions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

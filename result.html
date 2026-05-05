@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Result | EAPCET Prep</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">EAPCET Prep</a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="mocktest.html">Mock Test</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading page-heading-compact">
+      <p class="eyebrow">Result</p>
+      <h1>Your mock test summary</h1>
+      <p>Review score, intelligence, confidence insights, and the next best action.</p>
+    </section>
+
+    <section id="result-card" class="result-card">
+      <div class="result-grid">
+        <div class="result-stat">
+          <span>Total Questions</span>
+          <strong id="result-total">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Attempted</span>
+          <strong id="result-attempted">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Correct Answers</span>
+          <strong id="result-correct">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Wrong Answers</span>
+          <strong id="result-wrong">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Score</span>
+          <strong id="result-score">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Accuracy</span>
+          <strong id="result-accuracy">0%</strong>
+        </div>
+        <div class="result-stat">
+          <span>Time Taken</span>
+          <strong id="result-time">00:00</strong>
+        </div>
+        <div class="result-stat intelligence-stat">
+          <span>Intelligence Score</span>
+          <strong id="result-intelligence">0</strong>
+          <small id="result-intelligence-label">Beginner</small>
+        </div>
+        <div class="result-stat">
+          <span>Speed Score</span>
+          <strong id="result-speed-score">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Consistency</span>
+          <strong id="result-consistency">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Total XP</span>
+          <strong id="result-xp">0</strong>
+        </div>
+        <div class="result-stat">
+          <span>Level</span>
+          <strong id="result-level">Level 1</strong>
+        </div>
+        <div class="result-stat">
+          <span>Streak</span>
+          <strong id="result-streak">0 day</strong>
+        </div>
+        <div class="result-stat">
+          <span>Overconfidence</span>
+          <strong id="result-overconfidence">0</strong>
+          <small>Sure but wrong</small>
+        </div>
+        <div class="result-stat">
+          <span>Good Intuition</span>
+          <strong id="result-good-intuition">0</strong>
+          <small>Not sure but correct</small>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <a class="secondary-button outline-button" href="practice.html">Practice More</a>
+        <a class="secondary-button outline-button" href="dashboard.html">View Dashboard</a>
+        <a class="primary-button" href="mocktest.html">Retake Mock Test</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
